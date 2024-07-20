@@ -1,0 +1,12 @@
+{{ define "content" }}
+    <div class="container mt-4">
+        {{ if not .User.LoggedIn }}
+        <h1>You are not logged in!</h1>
+        <a class="btn btn-round btn-secondary" href="/register">Register</a>
+        <a class="btn btn-round btn-primary" href="/login">Login</a>
+        {{ else }}
+            <h1>Welcome home, <span>{{ .User.Account.Username }}</span></h1>
+            <a href="/post/logout">Logout</a>
+        {{ end }}
+    </div>
+{{ end }}

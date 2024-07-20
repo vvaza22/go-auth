@@ -1,0 +1,41 @@
+{{ define "content" }}
+    <main class="form-main">
+        <form id="register-form" action="/post/register" method="POST" autocomplete="off">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label" for="first_name">First Name: </label>
+                    <input class="form-control" id="first_name" type="text" name="first_name" aria-describedby="first_name_invalid" />
+                    <div class="valid-feedback">Looks Good!</div>
+                    <div id="first_name_invalid" class="invalid-feedback"></div>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="last_name">Last Name: </label>
+                    <input class="form-control" id="last_name" type="text" name="last_name" aria-describedby="last_name_invalid" />
+                    <div class="valid-feedback">Looks Good!</div>
+                    <div id="last_name_invalid" class="invalid-feedback"></div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="username">Username: </label>
+                <input class="form-control" id="username" type="text" name="username" aria-describedby="username_invalid" />
+                <div class="valid-feedback">Looks Good!</div>
+                <div id="username_invalid" class="invalid-feedback"></div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="password">Password: </label>
+                <input class="form-control" id="password" type="password" name="password" aria-describedby="password_invalid" />
+                <div class="valid-feedback">Looks Good!</div>
+                <div id="password_invalid" class="invalid-feedback"></div>
+            </div>
+            <div class="mb-3">
+                <input class="btn btn-round btn-outline-primary" type="submit" value="Sign Up" />
+            </div>
+        </form>
+        <div class="navigator">
+            <span>Already Registered? </span>
+            <a href="/login">Login</a>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="/static/js/register.js"></script>
+{{ end }}

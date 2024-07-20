@@ -1,0 +1,15 @@
+{{ define "layout" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ .Title }}</title>
+    <meta charset="utf-8" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+    {{ template "content" . }}
+</body>
+</html>
+{{ end }}
